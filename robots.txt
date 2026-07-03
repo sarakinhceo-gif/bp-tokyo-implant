@@ -7,10 +7,4 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-User-agent: Yeti
-Allow: /
-
-User-agent: OAI-SearchBot
-Allow: /
-
-Sitemap: https://tokyo-implant.pages.dev/sitemap.xml
+Sitemap: https://samseong-hotplace-review.xyz/sitemap.xml
