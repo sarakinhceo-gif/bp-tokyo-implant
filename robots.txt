@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tokyo-implant.node-link.shop/sitemap.xml
+Sitemap: https://yeonnam-night-hot.node-link.shop/sitemap.xml
