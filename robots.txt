@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yeonnam-night-hot.node-link.shop/sitemap.xml
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://samseong-hotplace-review.xyz/sitemap.xml
