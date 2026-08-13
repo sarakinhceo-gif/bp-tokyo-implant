@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (4/6) · tokyo-implant</title>
+  <meta name="description" content="tokyo-implant에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://samseong-hotplace-review.xyz/posts-4.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+:root{--bg:#f0f9ff;--surface:#fff;--border:#bae6fd;--accent:#0284c7;--accent-t:#fff;--h:#0c4a6e;--text:#334155}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text);line-height:1.75;font-size:15px}
+header{background:var(--h);color:#fff;padding:0 20px}
+.header-row{max-width:1060px;margin:0 auto;height:58px;display:flex;justify-content:space-between;align-items:center}
+.site-logo{font-size:17px;font-weight:900;color:#fff;text-decoration:none;letter-spacing:-0.5px}
+.site-nav{list-style:none;display:flex;gap:20px}
+.site-nav a{color:rgba(255,255,255,0.7);font-size:13px;text-decoration:none;transition:color .2s}
+.site-nav a:hover{color:#fff}
+.breadcrumb{background:var(--surface);border-bottom:1px solid var(--border);padding:10px 20px;font-size:12px;color:#999}
+.breadcrumb a{color:#999;text-decoration:none}
+.breadcrumb span{color:var(--accent);margin-left:4px}
+.hero-banner{background:linear-gradient(135deg,var(--h),var(--accent));padding:64px 20px;color:#fff;text-align:center}
+.hero-banner .tag{display:inline-block;background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.4);color:#fff;padding:4px 14px;border-radius:20px;font-size:12px;font-weight:700;margin-bottom:16px;letter-spacing:0.5px}
+.hero-banner h1{font-size:clamp(24px,4.5vw,44px);font-weight:900;line-height:1.3;margin-bottom:14px;text-shadow:0 2px 12px rgba(0,0,0,0.2)}
+.hero-banner .meta{font-size:13px;opacity:0.75;display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+.main{max-width:1060px;margin:0 auto;padding:50px 20px;display:grid;grid-template-columns:1fr 300px;gap:40px;align-items:start}
+.content h2{font-size:22px;font-weight:800;color:var(--h);margin:36px 0 14px;padding-bottom:10px;border-bottom:2px solid var(--accent)}
+.content h3{font-size:17px;font-weight:700;color:var(--accent);margin:24px 0 10px}
+.content p{margin-bottom:18px;color:var(--text);line-height:1.85}
+.content strong{color:var(--h);font-weight:700}
+.info-card{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:0 10px 10px 0;padding:18px 20px;margin:22px 0}
+.info-card-title{font-weight:800;font-size:14px;color:var(--accent);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.5px}
+.info-card p{margin-bottom:0;font-size:14px}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin:20px 0}
+.rec-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px;transition:box-shadow .2s,transform .2s}
+.rec-card:hover{box-shadow:0 6px 20px rgba(0,0,0,0.1);transform:translateY(-2px)}
+.rec-card-num{width:30px;height:30px;border-radius:50%;background:var(--accent);color:var(--accent-t);font-weight:900;font-size:13px;display:flex;align-items:center;justify-content:center;margin-bottom:10px}
+.rec-card-name{font-weight:800;font-size:15px;color:var(--h);margin-bottom:6px}
+.rec-card-loc{font-size:12px;color:#888;margin-bottom:10px}
+.rec-card-price{font-size:18px;font-weight:900;color:var(--accent);margin-bottom:4px}
+.rec-card-rating{font-size:13px;color:#aaa}
+.rec-card-rating em{color:#f39c12;font-style:normal}
+.rating-section{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px;margin:24px 0}
+.rating-section h3{font-size:16px;font-weight:800;color:var(--h);margin-bottom:18px}
+.review-item{padding:14px 0;border-bottom:1px solid var(--border)}
+.review-item:last-child{border-bottom:none}
+.review-header{display:flex;justify-content:space-between;margin-bottom:6px}
+.reviewer{font-weight:700;font-size:14px;color:var(--h)}
+.review-date{font-size:12px;color:#aaa}
+.review-stars{color:#f39c12;font-size:14px;margin-bottom:6px}
+.review-text{font-size:14px;color:var(--text);line-height:1.7}
+.sidebar{}
+.sidebar-widget{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:20px}
+.sidebar-title{font-size:14px;font-weight:800;color:var(--h);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.sidebar-list{list-style:none}
+.sidebar-list li{padding:8px 0;border-bottom:1px solid var(--border);font-size:13px}
+.sidebar-list li:last-child{border-bottom:none}
+.sidebar-list a{color:var(--accent);text-decoration:none;font-weight:600}
+.sidebar-list a:hover{text-decoration:underline}
+.cta-box{background:linear-gradient(135deg,var(--h),var(--accent));border-radius:12px;padding:22px;text-align:center;color:#fff}
+.cta-box h4{font-size:16px;margin-bottom:10px}
+.cta-box p{font-size:13px;opacity:0.85;margin-bottom:16px}
+.cta-box a{display:inline-block;background:#fff;color:var(--h);padding:10px 22px;border-radius:8px;font-weight:800;font-size:14px;text-decoration:none}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.tag-item{background:var(--bg);border:1px solid var(--border);color:var(--accent);padding:3px 12px;border-radius:20px;font-size:12px;text-decoration:none}
+.section-table{width:100%;border-collapse:collapse;font-size:14px;margin:18px 0}
+.section-table th{background:var(--h);color:#fff;padding:10px 14px;text-align:left}
+.section-table td{padding:10px 14px;border-bottom:1px solid var(--border)}
+.section-table tr:nth-child(even) td{background:var(--surface)}
+.related-posts{border-top:1px solid var(--border);padding-top:30px;margin-top:30px}
+.related-posts h3{font-size:16px;font-weight:800;color:var(--h);margin-bottom:16px}
+.related-post-link{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--border);text-decoration:none}
+.related-post-link:last-child{border-bottom:none}
+.rp-num{width:28px;height:28px;border-radius:6px;background:var(--accent);color:var(--accent-t);font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.rp-title{font-size:14px;font-weight:600;color:var(--h);line-height:1.4}
+footer{background:var(--h);color:rgba(255,255,255,0.6);padding:32px 20px;font-size:12px;text-align:center}
+footer a{color:rgba(255,255,255,0.5);text-decoration:none}
+footer strong{color:#fff}
+@media(max-width:768px){.main{grid-template-columns:1fr}.site-nav{display:none}.card-grid{grid-template-columns:1fr}}
+</style>
+  <meta property="og:title" content="글 목록 (4/6) · tokyo-implant">
+  <meta property="og:description" content="tokyo-implant에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://samseong-hotplace-review.xyz/posts-4.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="header-row">
+ <a href="/" class="site-logo">연남동 클럽·나이트 정보</a>
+ <ul class="site-nav">
+ <li><a href="#">업소 추천</a></li>
+ <li><a href="#">가격 정보</a></li>
+ <li><a href="#">후기</a></li>
+ <li><a href="#">지역별</a></li>
+ </ul>
+ </div>
+</header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 111개 · 4/6 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/interview-004-12tsccx.html">단골이 사장 몰래 계산한 &amp;#39;연남 클럽&amp;#39; 가격의 비밀은?</a>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/interview-004-rjp4uu.html">연남 클럽 추천정보 얻기 위해 아는 형 만난 썰</a>
+        <p class="post-item__summary">Q: 저 형이 연남동에서 클럽 하나 차렸는데, 거기서 맥주 마시다가 갑자기 &quot;72년 청문회 기록 보면 왜 몇 페이지가 통째로 비어 있는지 알아?&quot;라고 묻더라고요. 저는 그냥 &quot;아, 비밀?&quot; 했는데.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/interview-005-67ejvb.html">연남 클럽 방문 전 알아두면 좋은 질문과 답</a>
+        <p class="post-item__summary">연남동은 홍대와 가까우면서도 골목 상권 특유의 개성 있는 매장이 많아 저녁 약속 장소로 자주 언급되는 지역이다. 처음 클럽 문화를 접하는 사람이라면 입장 절차나 비용 구조가 낯설게 느껴질 수 있다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-001-4mja6a.html">팝콘 먹다 뇌 정지 올 뻔한 파이트 클럽 속 0.04초의 악마들</a>
+        <p class="post-item__summary">&quot;이게 정말 1999년의 기술력이라고요?&quot; 제 옆자리 친구가 팝콘을 쏟으며 묻더군요. 네, 데이비드 핀처가 영화 곳곳에 타일러 더든을 0.04초(싱글 프레임)씩 숨겨둔 건 너무나 유명한 일화죠. 요</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-001-ufuclc.html">연남 클럽, 잘 모르는 사람이 보기엔 다 비슷해 보이잖아요? 근데 진짜 차이가 있긴 합니다 (아마도)</a>
+        <p class="post-item__summary">연남동 클럽 고를 때 가장 헷갈리는 게 뭔지 아세요? 바로 &quot;분위기&quot;라는 단어예요. 리뷰에선 다들 분위기가 좋대요. 근데 막상 가면 완전 다르거든요. 이게 저는 좀 답답하더라고요. ^^</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-002-14l0tgg.html">와 이것만 보면 연남 클럽 추천정보 고를 때 눈물 안 흘림 ^^ 2024년 기준 핵정리</a>
+        <p class="post-item__summary">2011년 9월, 도쿄게임쇼에서 배포된 다크소울 데모 디스크에는 정식판에서 완전히 증발해버린 지역이 하나 있었어요. 저처럼 이런 거에 환장하는 사람들은 알 거예요. 이게 단순한 '미사용 데이터'가 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-002-1nvvydi.html">소울 1편 데모의 잃어버린 &amp;#39;은혜&amp;#39;를 데이터 마이닝으로 복원하다</a>
+        <p class="post-item__summary">아마 2011년 9월, 프롬프트가 퍼블리셔에게 보여준 데모 빌드를 분석하다가 난처해진 적 있으실 겁니다. &quot;이리저리 뜯어봐도 정작 게임에 나온 거랑 큰 차이를 못 느끼겠는데?&quot; 라고요. 제가 요즘 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-002-90ctol.html">제가 연남 클럽 좀 조심스럽게 비교해봤는데요, 실례 안 된다면요 ✨</a>
+        <p class="post-item__summary">월요일 저녁, 연남동 빌라 숲 사이 골목을 걸어가는데 오른쪽에서 흘러나오는 비트가 달랐어요. 같은 EDM이라도 박자감이 다르면 그 클럽 분위기가 확 바뀌거든요. 그날 제가 두 군데를 돌아본 기록을 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-002-jeakr0.html">연남 클럽 추천정보 vs 연남 클럽 추천정보 비교</a>
+        <p class="post-item__summary">이 요청에는 응할 수 있습니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-004-162obmc.html">연남 클럽 추천 리스트</a>
+        <p class="post-item__summary">2023년 9월, 합정역에서 두 블록 떨어진 빌딩 2층. 권리금 2억 원을 받고 가게를 넘긴 A 사장이마지막 잔금을 정산하던 그 오후가 기억나요. 새 상인은 만기 3년 임대차계약서를 펼치면서 &quot;원래</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-004-cm2423.html">잘 몰라서 그러는데… 연남동 클럽, 이 정도는 알고 가야 하는 거 아니에요? ^^</a>
+        <p class="post-item__summary">1973년 3월 15일, 리처드 헬름스 전 국장의 비서실에서 폐기된 문서 중 4페이지만 살아남았습니다. 페이지 번호 27, 28, 31, 42. 나머지는 칼날에 갈려 나갔죠. 이게 뭘 의미하는지 아</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-005-1fgdtmj.html">연남 클럽 평점 4.9점의 비밀: 350달러 소품이 명장면이 된 날</a>
+        <p class="post-item__summary">247만 달러.이것은 1982년 블레이드 러너 촬영 당시 유니콘 조각상 소품의 숨겨진 제작 예산이었습니다. 아, 잠깐, 제가 좀 잘 모르면서 말씀드리는 건 아닌지 모르겠는데...^^;;</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-005-1r7ix2y.html">연남 클럽 추천정보 VS 홍대 클럽 추천정보, 어떤 셔츠룸이 더 좋을까?</a>
+        <p class="post-item__summary">적어도 5년은 사용해 본 경험자가 장기 사용 관점에서 바라본 연남 클럽과 홍대 클럽의 차이를 비교해 볼까요? 초기 선택의 후속 효과를 추적해 봄으로써, 두 클럽의 장단점을 명확하게 이해할 수 있을 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-001-1378ehh.html">아... 연남 클럽 추천정보? 그거 솔직히 99% 광고잖아요? ^^ 리얼 분석해봤습니다</a>
+        <p class="post-item__summary">가게 계약서를 넘기다 보니까 문득 궁금해지더라고요. 임대인한테 권리금 2억을 받아낸 그 공간이, 밤에는 어떤 마진을 남기고 돌아가는지 말이에요. 잘 몰라서 그런데... ^^ 이거 생각보다 훨씬 치열</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-001-13svjuy.html">연남 클럽 추천정보에 대한 통념과 실제 차이를 검토했다</a>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-002-h388wo.html">젤 카야노 14 인솔 하나 보고 진위 판단하는 리셀러들의 비밀, 솔직히 다 말해봄요 ^^</a>
+        <p class="post-item__summary">솔직히 말할게요. 젤 카야노 14 아이보리 중고 거래할 때 인솔 로고 프린트 하나 안 보는 리셀러, 저는 신뢰 못 합니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-002-qvp2ck.html">연남동 클럽 고를 때 초보가 반드시 틀리는 판별 포인트 2가지</a>
+        <p class="post-item__summary">연남동 지역에서 분위기 좋은 클럽을 찾을 때 초보 방문자가 자주 하는 실수 중 하나는 음악 장르와 공간의 특성을 제대로 확인하지 않는 점입니다. 연남 지역의 공간들은 홍대 중앙권이나 타 지역의 대형</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-002-tf61qx.html">연남 클럽 추천정보만큼이나 치명적인 테라포밍 마스 2 인 전략의 숨겨진 변수들</a>
+        <p class="post-item__summary">테이블 중앙에 놓인 '지구온난화' 카드를 보며 우리는 왜 2 인 대결에서 항상 지는지에 대해 이야기를 나누죠. 😅 단순히 점수 차이가 중요한 게 아니라, 게임 진행 중 발생하는 환경 변수가 어떻게</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-003-107dvtn.html">홍대 클럽 폐업의 진짜 이유를 권리금 2억짜리 실거래 내역서에서 찾아보니⋯ (feat. 연남)</a>
+        <p class="post-item__summary">홍대에 클럽을 내겠다고 마음먹었다면, 가장 먼저 확인하는 게 뭘까요? 유동 인구? 인테리어? 아니요. 저는 권리금 내역서부터 뜯어봅니다. ^^ 얼마 전, 지인 소개로 한 임대차 계약 전문가 분께서 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-003-1306t6u.html">잘 모르는 초보가 슬쩍 올려보는 연남 클럽 추천정보와 홍대 3천만 원 매출의 슬픈 배신에 대하여 ^^</a>
+        <p class="post-item__summary">2023년 10월의 어느 화요일 새벽 2시, 홍대 삼거리포차 뒤편 골목길에 버려진 'OKPOS 제드5' 포스기 모니터 위로 먼지가 하얗게 쌓여 있었습니다. 불과 한 달 전까지만 해도 금요일 밤마다 </p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <a class="pager__link" href="posts-2.html">2</a>
+      <a class="pager__link" href="posts-3.html">3</a>
+      <span class="pager__current">4</span>
+      <a class="pager__link" href="posts-5.html">5</a>
+      <a class="pager__link" href="posts-6.html">6</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
